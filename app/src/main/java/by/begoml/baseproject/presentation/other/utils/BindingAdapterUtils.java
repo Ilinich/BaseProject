@@ -4,8 +4,7 @@ import android.databinding.BindingAdapter;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
-
+import com.bumptech.glide.Glide;
 import by.begoml.baseproject.R;
 import by.begoml.baseproject.presentation.other.data_binding.RecyclerConfiguration;
 
@@ -29,10 +28,9 @@ public class BindingAdapterUtils {
 
     @BindingAdapter("app:imageUrl")
     public static void imageUrl(ImageView imageView, String v) {
-        Picasso.with(imageView.getContext())
+        Glide
+                .with(imageView.getContext())
                 .load(v)
-                .placeholder(R.drawable.img_placeholder)
-                .error(R.drawable.img_placeholder)
                 .into(imageView);
     }
 }
