@@ -6,6 +6,7 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import by.begoml.baseproject.R;
 import by.begoml.baseproject.presentation.other.data_binding.RecyclerConfiguration;
 
 /**
@@ -30,8 +31,8 @@ public class BindingAdapterUtils {
     public static void imageUrl(ImageView imageView, String v) {
         Picasso.with(imageView.getContext())
                 .load(v)
-//                .placeholder(R.drawable.img_placeholder)
-//                .error(R.drawable.img_placeholder)
+                .placeholder(R.drawable.img_placeholder)
+                .error(R.drawable.img_placeholder)
                 .into(imageView);
     }
 }
